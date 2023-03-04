@@ -1,0 +1,40 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  margin-top: 1.5rem;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+.box {
+  display: flex;
+  gap: 1.5rem;
+  @media only screen and (max-width: 600px) {
+    margin: 1.5rem 0;
+  }
+  &-img {
+    img {
+      height: 120px;
+      display: block;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 2rem;
+      color: var(--Grayish-blue);
+    }
+    h5 {
+      font-size: 1rem;
+    }
+    p {
+      color: var(--Dark-grayish-blue);
+    }
+  }
+}

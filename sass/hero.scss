@@ -1,0 +1,105 @@
+.container {
+  max-width: 1440px;
+  padding: 0 100px;
+  margin: auto;
+  @media only screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, minmax(1fr, 200px));
+  grid-gap: 1.5rem;
+  margin-top: 3rem;
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+
+  &-img {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    width: 100%;
+    @media only screen and (max-width: 600px) {
+      padding: 1.5rem 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &-title {
+    grid-column: 1 / 2;
+    grid-row: 2/3;
+    @media only screen and (max-width: 600px) {
+      padding: 1.5rem 0;
+    }
+  }
+
+  &-sub {
+    grid-column: 2/ 3;
+    grid-row: 2/3;
+    font-size: 1rem;
+    color: var(--Dark-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media only screen and (max-width: 600px) {
+      padding: 1.5rem 0;
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+  &-side {
+    grid-column: 3/-1;
+    grid-row: 1/3;
+
+    background-color: black;
+    color: white;
+    padding: 2.5rem 1.5rem;
+
+    h2 {
+      font-size: 3rem;
+      color: var(--Soft-orange);
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: var(--Dark-grayish-blue);
+    }
+    hr {
+      margin-top: 2rem;
+      border: 0.9px solid var(--Dark-grayish-blue);
+    }
+  }
+
+  &-btn {
+    background-color: var(--Soft-red);
+    padding: 0.8rem 3rem;
+    border: 0;
+    color: white;
+    align-self: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    @media only screen and (max-width: 600px) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: var(--font-bolder);
+    line-height: 1;
+    @media only screen and (max-width: 600px) {
+      font-size: 4.5rem;
+    }
+  }
+}
